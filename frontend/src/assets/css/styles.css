@@ -30,3 +30,6 @@ html, body {
 .text-primary {
     color: var(--color-primary) !important;
 }
+.jumbotron{
+    background-color: rgb(232, 235, 240);
+}
