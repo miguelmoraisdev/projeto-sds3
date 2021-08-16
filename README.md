@@ -1,29 +1,82 @@
-# Aplicação web com dashboard de vendas
+# SDS Vendas Dashboard 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/LICENSE) 
 
-Frontend hospedado no Netlify: https://miguelm-sdsvendas.netlify.app e backend hospedado no Heroku.
+# Sobre o projeto
 
-O projeto consiste em uma aplicação web que mostra um dashboard de vendas :bar_chart: utilizando 5 ferramentas principais: Spring, React, Bootstrap, PostgreSQL e Postman.
+https://miguelm-sdsvendas.netlify.app
 
-O backend da aplicação foi estruturado no padrão camadas da segunte forma: 
+ O SDS Vendas Dashboard é um aplicação full stack web responsiva construída durante a 3ª edição da **Semana DevSuperior** (#sds3), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
-:black_circle: Entidades e Camada de Acesso a Dados;
+A aplicação consiste em um dashboard de vendas com gráficos e uma tabela paginada detalhando todas as vendas e valores fechadas pelos vendedores.
 
-:black_circle: Camada de Serviços :heavy_plus_sign: DTO(Data Transfer Objects);
+## Layout web
+![Web 1](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/_assets/index.png)
 
-:black_circle: Controladores Rest;
+![Web 2](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/_assets/dashboard.png)
 
-:black_circle: Frontend(app).
+![Web 2](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/_assets/tabela.png)
 
-O framework Spring foi utilzado para o desenvolvimento do backend da aplicação com as ferramentas:
+## Modelo conceitual
+![Modelo Conceitual](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/_assets/sds3-mc.png)
 
-:heavy_check_mark: Spring JPA para mapeamento de objeto relacional;
+## Padrão Camadas
+![Padrão Camadas](https://github.com/miguelmoraisdev/projeto-sds3/blob/master/_assets/camadas.png)
+- Usamos o padrão camadas separando a aplicação backend em três camadas: Controladores Rest, Camada de Serviços e Camada de Acesso aos Dados (+ Entidades).
 
-:heavy_check_mark: Spring Secutiry para os recursos de segurança da aplicação;
+# Tecnologias utilizadas
+## Back end
+- Java
+- Spring Boot
+- JPA / Hibernate
+- Maven
+- H2 database
+- Postman (Teste de Requisições)
+## Front end
+- HTML / CSS / JS / TypeScript
+- ReactJS
+- Apex Charts
+- Expo
+## Implantação em produção
+- Back end: Heroku
+- Front end web: Netlify
+- Banco de dados: Postgresql
 
-:heavy_check_mark: Spring H2 Database para simular banco de dados relacional durante o desenvolvimento;
+# Como executar o projeto
 
-O Postman foi utilizado para testar as consultas paginada de vendas e consultas agrupada utilizadas nos gráficos do dashboard.
+## Back end
+Pré-requisitos: Java 11
 
-O PostgreSQL foi o banco relacional utilizado pela aplicação.
+```bash
+# clonar repositório
+git clone https://github.com/miguelmoraisdev/projeto-sds3
 
-O React foi utilizado para contrução do frontend da aplicação junto com o Bootstrap para facilitar o desenvolvimento de um layout responsivo.
+# entrar na pasta do projeto back end
+cd backend
+
+# executar o projeto
+./mvnw spring-boot:run
+```
+
+## Front end web
+Pré-requisitos: npm / yarn
+
+```bash
+# clonar repositório
+git clone https://github.com/miguelmoraisdev/projeto-sds3
+
+# entrar na pasta do projeto front end web
+cd frontend
+
+# instalar dependências
+yarn install
+
+# executar o projeto
+yarn start
+```
+
+# Autor
+
+Miguel Augusto de Morais Junior
+
+https://www.linkedin.com/in/miguel-morais-04a9ab1b0/
+
